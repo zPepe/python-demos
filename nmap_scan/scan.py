@@ -24,7 +24,7 @@ def scan_network(network):
 
 
 def main():
-    if sys.argv[1]:
+    if len(sys.argv) > 1:
         network = sys.argv[1]
     else:
         network = '127.0.0.1'
