@@ -1,5 +1,0 @@
-plain text string = kb0407@sbcglobal.net
-hashed with sha256 = 2b67083f09bde5684c5ecc2d3ef22433f8f0e6430e2c747f48bfc874d3572c98
-
-
------ rockyou.txt wordlist------- 
