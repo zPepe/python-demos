@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type=text/css> {{ css_string }} </style> 
+    <body>
+        <a name="top"></a>
+    <div id="container">
+        <h1>Nmap Scan Report - Scanned at {{date}}</h1>
+        {% for host, value in data.items() %}
+        <hr class="print_only">
+        <a name="host"></a>
+        <h2 class="up">{{ host }}
+            <span class="print_only">(online)</span>
+        </h2>
+        <div id="hostblock" class="unhidden">
+            <h3>Address</h3>
+            <ul>
+                <li>{{ host }}</li>
+            </ul>
+            {% for proto, _value in value.items() %}
+                <h3>Proto: {{ proto }}</h3>
+                {% for port, estado in _value.items() %}
+                    <table id="porttable" cellspacing="1">
+                        <tr class="head">
+                            <td>Port</td>
+                            <td>Proto</td>
+                            <td>State</td>
+                            <td>service</td>
+                        </tr>
+                        <tr class="filtered">
+                            <td>{{ port }}</td>
+                            <td>{{ proto }}</td>
+                            <td>{{ estado["state"] }}</td>
+                            <td>{{ estado["service"] }}</td>
+                        </tr>
+                    </table>
+                {% endfor %} 
+            {% endfor %}
+            <br>
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+netaddr==0.7.19
+python-nmap==0.6.1

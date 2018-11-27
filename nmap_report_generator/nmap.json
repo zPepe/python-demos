@@ -1,0 +1,36 @@
+{
+    "127.0.0.1": {
+        "udp": {
+            "5353": {
+                "state": "open|filtered",
+                "service": "zeroconf"
+            },
+            "68": {
+                "state": "open|filtered",
+                "service": "dhcpc"
+            },
+            "631": {
+                "state": "open|filtered",
+                "service": "ipp"
+            }
+        },
+        "tcp": {
+            "443": {
+                "state": "open",
+                "service": "https"
+            },
+            "22": {
+                "state": "open",
+                "service": "ssh"
+            },
+            "902": {
+                "state": "open",
+                "service": "iss-realsecure"
+            },
+            "631": {
+                "state": "open",
+                "service": "ipp"
+            }
+        }
+    }
+}
